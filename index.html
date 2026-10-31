@@ -15,12 +15,12 @@
       --border-subtle: #e2e8f0;
       --border-accent: #a7f3d0;
       
-      --primary-deep: #064e3b;      /* Verde scuro elegante per titoli */
-      --accent-sage: #059669;       /* Verde smeraldo raffinato */
-      --accent-light: #d1fae5;      /* Sfondo badge verde chiaro */
+      --primary-deep: #064e3b;      
+      --accent-sage: #059669;       
+      --accent-light: #d1fae5;      
       
-      --text-main: #0f172a;         /* Testo principale scuro ma morbido */
-      --text-muted: #475569;        /* Testo secondario leggibile */
+      --text-main: #0f172a;         
+      --text-muted: #475569;        
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
@@ -133,9 +133,9 @@
       border-radius: 16px;
       padding: 20px;
       text-align: center;
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
-    .kpi-card:hover { border-color: var(--accent-sage); transform: translateY(-2px); }
+    .kpi-card:hover { border-color: var(--accent-sage); transform: translateY(-4px); box-shadow: 0 10px 25px rgba(5, 150, 105, 0.08); }
     .kpi-icon { font-size: 1.6rem; margin-bottom: 8px; }
     .kpi-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; color: var(--primary-deep); }
     .kpi-desc { color: var(--text-muted); font-size: 0.8rem; }
@@ -151,7 +151,9 @@
       border-radius: 16px;
       padding: 24px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+      transition: all 0.2s ease;
     }
+    .timeline-item:hover { transform: translateY(-2px); border-color: var(--border-accent); }
     .item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; flex-wrap: wrap; gap: 8px; }
     .item-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); }
     .item-date { font-size: 0.8rem; color: var(--primary-deep); font-weight: 700; background: var(--accent-light); padding: 3px 12px; border-radius: 10px; }
@@ -197,9 +199,9 @@
       padding: 26px;
       margin-bottom: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
-    .project-card:hover { transform: translateY(-2px); border-color: var(--accent-sage); background: var(--card-hover); }
+    .project-card:hover { transform: translateY(-3px); border-color: var(--accent-sage); background: var(--card-hover); box-shadow: 0 12px 30px rgba(5, 150, 105, 0.08); }
     .featured-card-style {
       background: #ffffff;
       border: 2px solid var(--accent-sage);
@@ -241,11 +243,11 @@
         <div class="hero-title">Product-Minded Master's Student & Aspiring Product Manager</div>
         
         <p class="hero-bio">
-          Combining audit-grade rigor in risk and process verification with hands-on experience shipping digital tools, automating workflows, and translating stakeholder needs into requirements[cite: 5]. Double degree candidate (Pavia-Szeged) focused on driving outcomes through structured thinking and user empathy[cite: 5].
+          Combining rigorous process verification with hands-on experience shipping digital tools, automating workflows, and translating stakeholder needs into requirements. Double degree candidate focused on driving outcomes through structured thinking and user empathy.
         </p>
 
         <div class="social-pills">
-          <a href="https://it.linkedin.com/in/irene-poletti/" target="_blank" class="social-pill">LinkedIn ↗</a>
+          <a href="https://www.linkedin.com/in/irene-poletti/" target="_blank" class="social-pill">LinkedIn ↗</a>
           <a href="https://github.com/irenepoletti01-coder" target="_blank" class="social-pill">GitHub ↗</a>
           <a href="mailto:irenepolettiads@gmail.com" class="social-pill">Email ✉</a>
         </div>
@@ -290,7 +292,7 @@
           <div class="cert-badge">McK</div>
           <div class="cert-info">
             <div class="cert-title">McKinsey Forward Program</div>
-            <div class="cert-issuer">Soft Skills & Leadership[cite: 6]</div>
+            <div class="cert-issuer">Soft Skills & Leadership</div>
           </div>
         </div>
 
@@ -298,7 +300,7 @@
           <div class="cert-badge">OCI</div>
           <div class="cert-info">
             <div class="cert-title">OCI AI Foundations Associate</div>
-            <div class="cert-issuer">Oracle Cloud Infrastructure[cite: 6]</div>
+            <div class="cert-issuer">Oracle Cloud Infrastructure</div>
           </div>
         </div>
       </div>
@@ -309,50 +311,50 @@
         <div class="timeline-item">
           <div class="item-header">
             <div class="item-title">M.Sc. International Business & Entrepreneurship (MIBE), Double Degree</div>
-            <div class="item-date">Sep 2025 – Jun 2027 (exp.)[cite: 5]</div>
+            <div class="item-date">Sep 2025 – Jun 2027 (exp.)</div>
           </div>
-          <div class="item-sub">University of Pavia (Italy) & University of Szeged (Hungary)[cite: 5]</div>
-          <div class="item-desc">High academic standing: 30/30 cum laude in Innovation and Technology Law; 28/30 in Applied Project Management[cite: 5]. Focusing on innovation regulation and project management[cite: 5].</div>
+          <div class="item-sub">University of Pavia (Italy) & University of Szeged (Hungary)</div>
+          <div class="item-desc">High academic standing: 30/30 cum laude in Innovation and Technology Law; 28/30 in Applied Project Management. Focusing on innovation regulation and project management.</div>
         </div>
 
         <div class="timeline-item">
           <div class="item-header">
             <div class="item-title">B.Sc. in Economics & Management</div>
-            <div class="item-date">Sep 2022 – Jul 2025[cite: 5]</div>
+            <div class="item-date">Sep 2022 – Jul 2025</div>
           </div>
-          <div class="item-sub">University of Pavia (Italy)[cite: 5]</div>
-          <div class="item-desc">Includes Erasmus+ exchange at Université Catholique de Lille (Sep 2024 – Jan 2025): full curriculum in Economics, Administration, and Management in English[cite: 5].</div>
+          <div class="item-sub">University of Pavia (Italy)</div>
+          <div class="item-desc">Includes Erasmus+ exchange at Université Catholique de Lille (Sep 2024 – Jan 2025): full curriculum in Economics, Administration, and Management in English.</div>
         </div>
       </div>
 
-      <!-- EXPERIENCE (DAL CV) -->
+      <!-- EXPERIENCE -->
       <h3 style="color: var(--primary-deep); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Professional Experience</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="item-header">
             <div class="item-title">ICT Project Manager (Freelance)</div>
-            <div class="item-date">Sep 2022 – Jul 2025[cite: 5]</div>
+            <div class="item-date">Sep 2022 – Jul 2025</div>
           </div>
-          <div class="item-sub">Innovia S.r.l. — Pavia, Italy[cite: 5]</div>
-          <div class="item-desc">Managed and updated digital infrastructure (Spazio Acqua, Innovia, Centro La Ducale). Deployed Zoho One forms for automated energy-diagnosis data pipelines. Captured client requirements and served as direct liaison with technical suppliers[cite: 5].</div>
+          <div class="item-sub">Innovia S.r.l. — Pavia, Italy</div>
+          <div class="item-desc">Managed and updated digital infrastructure (Spazio Acqua, Innovia, Centro La Ducale). Deployed Zoho One forms for automated energy-diagnosis data pipelines. Captured client requirements and served as direct liaison with technical suppliers.</div>
         </div>
 
         <div class="timeline-item">
           <div class="item-header">
             <div class="item-title">Audit Intern</div>
-            <div class="item-date">Nov 2025 – Apr 2026[cite: 5]</div>
+            <div class="item-date">Nov 2025 – Apr 2026</div>
           </div>
-          <div class="item-sub">PwC Italy (PricewaterhouseCoopers) — Milan, Italy[cite: 5]</div>
-          <div class="item-desc">Analyzed large datasets using advanced Excel and digital audit systems. Executed internal-control tests and verified end-to-end compliance workflows (e-invoicing/VAT), translating a requirement-validation mindset into launch readiness[cite: 5].</div>
+          <div class="item-sub">PwC Italy (PricewaterhouseCoopers) — Milan, Italy</div>
+          <div class="item-desc">Analyzed large datasets using advanced Excel and digital audit systems. Executed internal-control tests and verified end-to-end compliance workflows, translating a requirement-validation mindset into launch readiness.</div>
         </div>
 
         <div class="timeline-item">
           <div class="item-header">
             <div class="item-title">Process Team Member</div>
-            <div class="item-date">2026 – Present[cite: 5]</div>
+            <div class="item-date">2026 – Present</div>
           </div>
-          <div class="item-sub">Erasmus Student Network (ESN) Szeged — Szeged, Hungary[cite: 5]</div>
-          <div class="item-desc">Supported internal workflows for international student programs, planning and scaling events for a multicultural community while gathering user feedback across cultural contexts[cite: 5].</div>
+          <div class="item-sub">Erasmus Student Network (ESN) Szeged — Szeged, Hungary</div>
+          <div class="item-desc">Supported internal workflows for international student programs, planning and scaling events for a multicultural community while gathering user feedback across cultural contexts.</div>
         </div>
       </div>
     </section>
@@ -376,7 +378,7 @@
         </div>
         <div class="btn-group">
           <a href="https://pixel-perfect-clone-01794.lovable.app" target="_blank" class="btn btn-primary">🚀 Interactive Product Demo ↗</a>
-          <a href="https://prezi.com/view/0dTeRDAyCeSXepu8y1vGi41" target="_blank" class="btn btn-secondary">📊 Strategic Deck ↗</a>
+          <a href="https://prezi.com/p/edit/0dTeRDAyCeSXepu8y1vGi41/" target="_blank" class="btn btn-secondary">📊 Strategic Deck ↗</a>
         </div>
       </div>
 
