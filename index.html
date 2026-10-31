@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Irene Poletti | Portfolio</title>
+  <title>Irene Poletti | Associate Product Manager</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #06110a;
-      --card-bg: #0d1e14;
-      --card-hover: #132a1c;
-      --border-subtle: #1a3825;
-      --border-accent: #275438;
-      --accent-mint: #34d399;
-      --accent-emerald: #10b981;
-      --accent-glow: rgba(52, 211, 153, 0.15);
-      --text-main: #f0fdf4;
-      --text-muted: #86efac;
-      --tag-bg: #092214;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --card-hover: #f1f8f5;
+      --border-subtle: #e2e8f0;
+      --border-accent: #a7f3d0;
+      
+      --primary-deep: #064e3b;      /* Verde scuro elegante per titoli */
+      --accent-sage: #059669;       /* Verde smeraldo raffinato */
+      --accent-light: #d1fae5;      /* Sfondo badge verde chiaro */
+      
+      --text-main: #0f172a;         /* Testo principale scuro ma morbido */
+      --text-muted: #475569;        /* Testo secondario leggibile */
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      background-color: var(--bg-dark);
+      background-color: var(--bg-light);
       color: var(--text-main);
       line-height: 1.6;
       padding-top: 100px;
@@ -35,7 +36,7 @@
 
     .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
 
-    /* NAVBAR FLUTTUANTE A PILLOLA */
+    /* NAVBAR FLUTTUANTE MINIMAL */
     .navbar-container {
       position: fixed;
       top: 20px;
@@ -46,14 +47,14 @@
       z-index: 1000;
     }
     .navbar {
-      background: rgba(13, 30, 20, 0.92);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(12px);
-      border: 1px solid var(--border-accent);
+      border: 1px solid var(--border-subtle);
       padding: 8px 24px;
       border-radius: 40px;
       display: flex;
       gap: 28px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
     .navbar a {
       color: var(--text-muted);
@@ -63,50 +64,47 @@
       transition: color 0.2s;
     }
     .navbar a:hover, .navbar a.active {
-      color: var(--accent-mint);
+      color: var(--primary-deep);
     }
 
-    /* HERO CARD CENTRALIZZATA */
+    /* HERO CARD LUMINOSA E PULITA */
     .hero-card {
-      background: linear-gradient(180deg, var(--card-bg) 0%, #08160d 100%);
-      border: 1px solid var(--border-accent);
+      background: var(--card-bg);
+      border: 1px solid var(--border-subtle);
       border-radius: 24px;
       padding: 40px 32px;
       text-align: center;
       margin-bottom: 40px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     }
     .avatar {
       width: 115px;
       height: 115px;
       border-radius: 50%;
-      border: 3px solid var(--accent-mint);
+      border: 3px solid var(--accent-sage);
       object-fit: cover;
       margin-bottom: 16px;
-      box-shadow: 0 0 20px var(--accent-glow);
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
     }
     .hero-name {
       font-size: 2.2rem;
       font-weight: 800;
       margin-bottom: 4px;
-      background: linear-gradient(135deg, #ffffff 0%, var(--accent-mint) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--primary-deep);
     }
-    .hero-title { color: var(--accent-mint); font-weight: 600; font-size: 1.05rem; margin-bottom: 16px; }
+    .hero-title { color: var(--accent-sage); font-weight: 700; font-size: 1.05rem; margin-bottom: 16px; }
     .hero-bio {
-      color: #bbf7d0;
+      color: var(--text-muted);
       font-size: 0.95rem;
       max-width: 680px;
       margin: 0 auto 24px auto;
-      opacity: 0.9;
     }
 
-    .social-pills { display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; }
+    .social-pills { display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
     .social-pill {
-      background: var(--tag-bg);
-      border: 1px solid var(--border-accent);
-      color: var(--text-main);
+      background: var(--bg-light);
+      border: 1px solid var(--border-subtle);
+      color: var(--primary-deep);
       padding: 7px 18px;
       border-radius: 20px;
       text-decoration: none;
@@ -114,17 +112,17 @@
       font-weight: 600;
       transition: all 0.2s;
     }
-    .social-pill:hover { border-color: var(--accent-mint); color: var(--accent-mint); transform: translateY(-1px); }
+    .social-pill:hover { border-color: var(--accent-sage); background: var(--accent-light); transform: translateY(-1px); }
 
     .skills-wrapper { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
     .skill-tag {
-      background: rgba(52, 211, 153, 0.1);
-      color: var(--accent-mint);
+      background: var(--accent-light);
+      color: var(--primary-deep);
       font-size: 0.8rem;
       font-weight: 600;
       padding: 5px 14px;
       border-radius: 12px;
-      border: 1px solid var(--border-accent);
+      border: 1px solid #a7f3d0;
     }
 
     /* KPI CARDS GRID */
@@ -135,16 +133,16 @@
       border-radius: 16px;
       padding: 20px;
       text-align: center;
-      transition: border-color 0.2s;
+      transition: all 0.2s;
     }
-    .kpi-card:hover { border-color: var(--border-accent); }
+    .kpi-card:hover { border-color: var(--accent-sage); transform: translateY(-2px); }
     .kpi-icon { font-size: 1.6rem; margin-bottom: 8px; }
-    .kpi-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; color: var(--accent-mint); }
-    .kpi-desc { color: #a7f3d0; font-size: 0.8rem; opacity: 0.8; }
+    .kpi-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; color: var(--primary-deep); }
+    .kpi-desc { color: var(--text-muted); font-size: 0.8rem; }
 
     /* SEZIONI GENERALI */
-    .section-header { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
-    .section-header::before { content: ''; width: 4px; height: 22px; background: var(--accent-mint); border-radius: 2px; }
+    .section-header { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; color: var(--primary-deep); display: flex; align-items: center; gap: 10px; }
+    .section-header::before { content: ''; width: 4px; height: 22px; background: var(--accent-sage); border-radius: 2px; }
 
     .timeline { display: flex; flex-direction: column; gap: 20px; margin-bottom: 50px; }
     .timeline-item {
@@ -152,29 +150,31 @@
       border: 1px solid var(--border-subtle);
       border-radius: 16px;
       padding: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
     }
-    .item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+    .item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; flex-wrap: wrap; gap: 8px; }
     .item-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); }
-    .item-date { font-size: 0.8rem; color: var(--accent-mint); font-weight: 700; background: var(--tag-bg); padding: 3px 12px; border-radius: 10px; border: 1px solid var(--border-accent); }
-    .item-sub { color: var(--accent-mint); font-size: 0.9rem; font-weight: 500; margin-bottom: 12px; }
-    .item-desc { color: #bbf7d0; font-size: 0.88rem; opacity: 0.85; }
+    .item-date { font-size: 0.8rem; color: var(--primary-deep); font-weight: 700; background: var(--accent-light); padding: 3px 12px; border-radius: 10px; }
+    .item-sub { color: var(--accent-sage); font-size: 0.9rem; font-weight: 600; margin-bottom: 12px; }
+    .item-desc { color: var(--text-muted); font-size: 0.88rem; }
 
-    /* GRID CERTIFICAZIONI (ORACLE & MCKINSEY) */
+    /* GRID CERTIFICAZIONI */
     .certs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 50px; }
     .cert-card {
-      background: linear-gradient(135deg, var(--card-bg) 0%, #0b1a11 100%);
-      border: 1px solid var(--border-accent);
+      background: var(--card-bg);
+      border: 1px solid var(--border-subtle);
       border-radius: 16px;
       padding: 20px;
       display: flex;
       align-items: center;
       gap: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
       transition: all 0.2s;
     }
-    .cert-card:hover { border-color: var(--accent-mint); transform: translateY(-2px); }
+    .cert-card:hover { border-color: var(--accent-sage); transform: translateY(-2px); }
     .cert-badge {
-      background: var(--accent-mint);
-      color: #041009;
+      background: var(--primary-deep);
+      color: #ffffff;
       width: 44px;
       height: 44px;
       border-radius: 12px;
@@ -184,11 +184,10 @@
       font-weight: 800;
       font-size: 0.85rem;
       flex-shrink: 0;
-      box-shadow: 0 0 12px var(--accent-glow);
     }
     .cert-info { display: flex; flex-direction: column; }
     .cert-title { font-size: 0.92rem; font-weight: 700; color: var(--text-main); margin-bottom: 2px; }
-    .cert-issuer { font-size: 0.8rem; color: var(--accent-mint); font-weight: 600; }
+    .cert-issuer { font-size: 0.8rem; color: var(--accent-sage); font-weight: 600; }
 
     /* PROJECT CARDS */
     .project-card {
@@ -197,21 +196,22 @@
       border-radius: 16px;
       padding: 26px;
       margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
       transition: all 0.2s;
     }
-    .project-card:hover { transform: translateY(-2px); border-color: var(--border-accent); background: var(--card-hover); }
+    .project-card:hover { transform: translateY(-2px); border-color: var(--accent-sage); background: var(--card-hover); }
     .featured-card-style {
-      background: linear-gradient(145deg, #132a1c 0%, #09170e 100%);
-      border: 1px solid var(--accent-emerald);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      background: #ffffff;
+      border: 2px solid var(--accent-sage);
+      box-shadow: 0 10px 30px rgba(5, 150, 105, 0.08);
     }
-    .badge-feat { background: var(--accent-mint); color: #041009; font-size: 0.72rem; font-weight: 800; padding: 3px 10px; border-radius: 6px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
+    .badge-feat { background: var(--primary-deep); color: #ffffff; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
     .btn-group { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
     .btn { text-decoration: none; font-size: 0.85rem; font-weight: 700; padding: 9px 18px; border-radius: 8px; transition: 0.2s; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary { background: var(--accent-mint); color: #041009; }
-    .btn-primary:hover { background: #6ee7b7; transform: translateY(-1px); }
-    .btn-secondary { border: 1px solid var(--border-accent); color: var(--text-main); background: var(--tag-bg); }
-    .btn-secondary:hover { border-color: var(--accent-mint); color: var(--accent-mint); transform: translateY(-1px); }
+    .btn-primary { background: var(--primary-deep); color: #ffffff; }
+    .btn-primary:hover { background: var(--accent-sage); transform: translateY(-1px); }
+    .btn-secondary { border: 1px solid var(--border-subtle); color: var(--primary-deep); background: var(--bg-light); }
+    .btn-secondary:hover { border-color: var(--accent-sage); background: var(--accent-light); transform: translateY(-1px); }
 
     footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; padding-top: 30px; border-top: 1px solid var(--border-subtle); }
 
@@ -222,7 +222,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR FLUTTUANTE (Stile Enes) -->
+  <!-- NAVBAR FLUTTUANTE -->
   <div class="navbar-container">
     <nav class="navbar">
       <a href="#home" class="active">Home</a>
@@ -238,44 +238,43 @@
       <div class="hero-card">
         <img src="https://github.com/irenepoletti01-coder.png" alt="Irene Poletti" class="avatar">
         <h1 class="hero-name">Irene Poletti</h1>
-        <div class="hero-title">International Business & Entrepreneurship | Double Degree Candidate</div>
+        <div class="hero-title">Product-Minded Master's Student & Aspiring Product Manager</div>
         
         <p class="hero-bio">
-          Bridging Corporate Finance, Financial Auditing, and RegTech Compliance. Former Audit LABO Intern at PwC Italy. Focused on ESG Disclosures, Valuation, and Digital Business Models across the EU Single Market.
+          Combining audit-grade rigor in risk and process verification with hands-on experience shipping digital tools, automating workflows, and translating stakeholder needs into requirements[cite: 5]. Double degree candidate (Pavia-Szeged) focused on driving outcomes through structured thinking and user empathy[cite: 5].
         </p>
 
         <div class="social-pills">
-          <a href="https://it.linkedin.com/in/irene-poletti-307270244" target="_blank" class="social-pill">LinkedIn ↗</a>
+          <a href="https://it.linkedin.com/in/irene-poletti/" target="_blank" class="social-pill">LinkedIn ↗</a>
           <a href="https://github.com/irenepoletti01-coder" target="_blank" class="social-pill">GitHub ↗</a>
-          <a href="mailto:irene.poletti01@universitadipavia.it" class="social-pill">Email ✉</a>
+          <a href="mailto:irenepolettiads@gmail.com" class="social-pill">Email ✉</a>
         </div>
 
         <div class="skills-wrapper">
-          <span class="skill-tag">Financial Auditing</span>
-          <span class="skill-tag">Corporate Finance</span>
-          <span class="skill-tag">ESG / CSRD Compliance</span>
-          <span class="skill-tag">Advanced Excel</span>
-          <span class="skill-tag">MATLAB</span>
-          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Requirements Gathering</span>
+          <span class="skill-tag">Project Management</span>
+          <span class="skill-tag">Process Automation</span>
+          <span class="skill-tag">Stakeholder Communication</span>
+          <span class="skill-tag">Zoho One & Excel</span>
         </div>
       </div>
 
       <!-- CARDS KPI HIGHLIGHT -->
       <div class="kpi-grid">
         <div class="kpi-card">
-          <div class="kpi-icon">📊</div>
-          <div class="kpi-title">Audit & Control</div>
-          <div class="kpi-desc">Automated process verification and corporate financial testing</div>
+          <div class="kpi-icon">🚀</div>
+          <div class="kpi-title">Product Execution</div>
+          <div class="kpi-desc">Shipping digital infrastructure, web maintenance, and automated data pipelines</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon">🌱</div>
-          <div class="kpi-title">RegTech & ESG</div>
-          <div class="kpi-desc">CSRD & ESRS framework disclosure mapping & compliance</div>
+          <div class="kpi-icon">🎯</div>
+          <div class="kpi-title">Requirements & QA</div>
+          <div class="kpi-desc">Requirement validation mindset, risk assessment, and workflow compliance testing</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon">📈</div>
-          <div class="kpi-title">Financial Modeling</div>
-          <div class="kpi-desc">5-year corporate feasibility models and quantitative valuation</div>
+          <div class="kpi-icon">🌐</div>
+          <div class="kpi-title">Cross-Functional</div>
+          <div class="kpi-desc">Community management, international event scaling, and stakeholder liaison</div>
         </div>
       </div>
     </section>
@@ -284,141 +283,125 @@
     <section id="about">
       <h2 class="section-header">About Me</h2>
 
-      <!-- CERTIFICAZIONI ESCLUSIVE -->
-      <h3 style="color: var(--accent-mint); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Professional Certifications</h3>
+      <!-- CERTIFICAZIONI -->
+      <h3 style="color: var(--primary-deep); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Professional Certifications</h3>
       <div class="certs-grid">
-        <div class="cert-card">
-          <div class="cert-badge">OCI</div>
-          <div class="cert-info">
-            <div class="cert-title">OCI AI Foundations Associate</div>
-            <div class="cert-issuer">Oracle Cloud Infrastructure</div>
-          </div>
-        </div>
-
         <div class="cert-card">
           <div class="cert-badge">McK</div>
           <div class="cert-info">
             <div class="cert-title">McKinsey Forward Program</div>
-            <div class="cert-issuer">McKinsey & Company</div>
+            <div class="cert-issuer">Soft Skills & Leadership[cite: 6]</div>
           </div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-badge">PBI</div>
+          <div class="cert-badge">OCI</div>
           <div class="cert-info">
-            <div class="cert-title">Power BI Data Reporting</div>
-            <div class="cert-issuer">Coursera Specialization</div>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-badge">C1</div>
-          <div class="cert-info">
-            <div class="cert-title">English C1 Advanced</div>
-            <div class="cert-issuer">Certified Business Proficiency</div>
+            <div class="cert-title">OCI AI Foundations Associate</div>
+            <div class="cert-issuer">Oracle Cloud Infrastructure[cite: 6]</div>
           </div>
         </div>
       </div>
 
       <!-- EDUCATION -->
-      <h3 style="color: var(--accent-mint); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Education</h3>
+      <h3 style="color: var(--primary-deep); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Education</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="item-header">
-            <div class="item-title">M.Sc. International Business & Entrepreneurship (MIBE)</div>
-            <div class="item-date">2025 - Present</div>
+            <div class="item-title">M.Sc. International Business & Entrepreneurship (MIBE), Double Degree</div>
+            <div class="item-date">Sep 2025 – Jun 2027 (exp.)[cite: 5]</div>
           </div>
-          <div class="item-sub">University of Pavia (Italy) & Double Degree Candidate at University of Szeged (Hungary)</div>
-          <div class="item-desc">Focusing on European Business Environment, Advanced Corporate Finance, RegTech, and Digital Business Strategies.</div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="item-header">
-            <div class="item-title">Erasmus+ Academic Exchange</div>
-            <div class="item-date">2024 - 2025</div>
-          </div>
-          <div class="item-sub">Université Catholique de Lille (France)</div>
-          <div class="item-desc">Completed advanced coursework in Corporate Strategy, Financial Business Plans, and International Economics.</div>
+          <div class="item-sub">University of Pavia (Italy) & University of Szeged (Hungary)[cite: 5]</div>
+          <div class="item-desc">High academic standing: 30/30 cum laude in Innovation and Technology Law; 28/30 in Applied Project Management[cite: 5]. Focusing on innovation regulation and project management[cite: 5].</div>
         </div>
 
         <div class="timeline-item">
           <div class="item-header">
             <div class="item-title">B.Sc. in Economics & Management</div>
-            <div class="item-date">Graduated July 2025</div>
+            <div class="item-date">Sep 2022 – Jul 2025[cite: 5]</div>
           </div>
-          <div class="item-sub">University of Pavia (Italy)</div>
-          <div class="item-desc">Graduated with top academic standing (110/110 cum laude). Strong foundation in accounting, econometrics, and financial law.</div>
+          <div class="item-sub">University of Pavia (Italy)[cite: 5]</div>
+          <div class="item-desc">Includes Erasmus+ exchange at Université Catholique de Lille (Sep 2024 – Jan 2025): full curriculum in Economics, Administration, and Management in English[cite: 5].</div>
         </div>
       </div>
 
-      <!-- WORK EXPERIENCE -->
-      <h3 style="color: var(--accent-mint); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Work Experience</h3>
+      <!-- EXPERIENCE (DAL CV) -->
+      <h3 style="color: var(--primary-deep); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Professional Experience</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="item-header">
-            <div class="item-title">Corporate Audit Intern (Audit LABO)</div>
-            <div class="item-date">Nov 2025 - May 2026</div>
+            <div class="item-title">ICT Project Manager (Freelance)</div>
+            <div class="item-date">Sep 2022 – Jul 2025[cite: 5]</div>
           </div>
-          <div class="item-sub">PwC Italy — Milan</div>
-          <div class="item-desc">Executed automated financial process verification, analytical audit testing, and data compliance controls across corporate entities.</div>
+          <div class="item-sub">Innovia S.r.l. — Pavia, Italy[cite: 5]</div>
+          <div class="item-desc">Managed and updated digital infrastructure (Spazio Acqua, Innovia, Centro La Ducale). Deployed Zoho One forms for automated energy-diagnosis data pipelines. Captured client requirements and served as direct liaison with technical suppliers[cite: 5].</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div class="item-title">Audit Intern</div>
+            <div class="item-date">Nov 2025 – Apr 2026[cite: 5]</div>
+          </div>
+          <div class="item-sub">PwC Italy (PricewaterhouseCoopers) — Milan, Italy[cite: 5]</div>
+          <div class="item-desc">Analyzed large datasets using advanced Excel and digital audit systems. Executed internal-control tests and verified end-to-end compliance workflows (e-invoicing/VAT), translating a requirement-validation mindset into launch readiness[cite: 5].</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="item-header">
+            <div class="item-title">Process Team Member</div>
+            <div class="item-date">2026 – Present[cite: 5]</div>
+          </div>
+          <div class="item-sub">Erasmus Student Network (ESN) Szeged — Szeged, Hungary[cite: 5]</div>
+          <div class="item-desc">Supported internal workflows for international student programs, planning and scaling events for a multicultural community while gathering user feedback across cultural contexts[cite: 5].</div>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
-      <h2 class="section-header">Featured Projects</h2>
+      <h2 class="section-header">Featured Product Projects</h2>
 
       <!-- CorpProof FEATURED -->
       <div class="project-card featured-card-style">
-        <span class="badge-feat">Featured RegTech & ESG SaaS</span>
-        <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px;">CorpProof: Automated Sustainability Disclosure Verification</h3>
-        <p style="color: #bbf7d0; font-size: 0.9rem; margin-bottom: 14px; opacity: 0.9;">
-          B2B SaaS platform designed to streamline corporate ESG report audits under mandatory EU CSRD & ESRS directives. Features Evidence Mapping, ESRS Requirement Checking, and an AI Review Trail under Art. 50 EU AI Act. Pilot testbed: The Netherlands; Scale-up market: Germany.
+        <span class="badge-feat">Flagship Product Case Study</span>
+        <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: var(--primary-deep);">CorpProof: Automated Sustainability Disclosure Platform</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 14px;">
+          End-to-end product concept and B2B SaaS architecture addressing EU CSRD/ESRS regulatory compliance. Designed core modules including Evidence Mapping, ESRS Requirement Checking, and an AI Review Trail governed under Art. 50 of the EU AI Act. Developed comprehensive scaling roadmap for the Netherlands and German markets.
         </p>
         <div class="skills-wrapper" style="justify-content: flex-start; margin-bottom: 14px;">
-          <span class="skill-tag">CSRD / ESRS</span>
-          <span class="skill-tag">EU AI Act (Art. 50)</span>
-          <span class="skill-tag">Single Market RegTech</span>
+          <span class="skill-tag">Product Specs & MVP</span>
+          <span class="skill-tag">B2B SaaS Pricing</span>
+          <span class="skill-tag">Go-To-Market Strategy</span>
+          <span class="skill-tag">AI Governance</span>
         </div>
         <div class="btn-group">
-          <a href="https://pixel-perfect-clone-01794.lovable.app" target="_blank" class="btn btn-primary">🚀 Live Web Demo ↗</a>
-          <a href="https://prezi.com/view/0dTeRDAyCeSXepu8y1vGi41" target="_blank" class="btn btn-secondary">📊 Interactive Prezi ↗</a>
+          <a href="https://pixel-perfect-clone-01794.lovable.app" target="_blank" class="btn btn-primary">🚀 Interactive Product Demo ↗</a>
+          <a href="https://prezi.com/view/0dTeRDAyCeSXepu8y1vGi41" target="_blank" class="btn btn-secondary">📊 Strategic Deck ↗</a>
         </div>
       </div>
 
-      <!-- ACADEMIC PROJECTS -->
+      <!-- ACADEMIC & ANALYTICS PROJECTS -->
       <div class="project-card">
-        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;">Global Comfort Café: Feasibility & 5-Year Financial Model</h3>
-        <p style="color: #bbf7d0; font-size: 0.88rem; margin-bottom: 10px; opacity: 0.85;">
-          Led a cross-border project team as CEO at Université Catholique de Lille to build a complete 5-year financial feasibility model (Income Statement, Cash Flow, Balance Sheet, Break-Even Analysis).
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: var(--primary-deep);">Global Comfort Café: Feasibility & 5-Year Financial Strategy</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 10px;">
+          Acted as Team Lead (CEO) during Erasmus at Université Catholique de Lille to define commercial positioning, unit economics, and 5-year financial models for an international venture.
         </p>
         <div class="skills-wrapper" style="justify-content: flex-start;">
+          <span class="skill-tag">Venture Strategy</span>
           <span class="skill-tag">Financial Modeling</span>
-          <span class="skill-tag">Business Strategy</span>
+          <span class="skill-tag">Team Leadership</span>
         </div>
       </div>
 
       <div class="project-card">
-        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;">Automotive Depreciation & Market Resilience Analysis</h3>
-        <p style="color: #bbf7d0; font-size: 0.88rem; margin-bottom: 10px; opacity: 0.85;">
-          Applied econometric and K-Means clustering study analyzing 5-year depreciation patterns across 150+ vehicle models using MATLAB data workflows.
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: var(--primary-deep);">Automotive Market Analysis: MATLAB & Clustering</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 10px;">
+          Applied econometric and K-Means clustering workflows across 150+ vehicle models using MATLAB to evaluate market resilience and depreciation metrics.
         </p>
         <div class="skills-wrapper" style="justify-content: flex-start;">
           <span class="skill-tag">MATLAB</span>
-          <span class="skill-tag">Econometrics</span>
-          <span class="skill-tag">Clustering</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;">The Geopolitics of Aviation Fuel: Energy Shock Economics</h3>
-        <p style="color: #bbf7d0; font-size: 0.88rem; margin-bottom: 10px; opacity: 0.85;">
-          Macroeconomic case study analyzing refinery yield constraints, jet fuel price elasticity, supply chain vulnerabilities, and Sustainable Aviation Fuel (SAF) market economics.
-        </p>
-        <div class="skills-wrapper" style="justify-content: flex-start;">
-          <span class="skill-tag">Energy Economics</span>
-          <span class="skill-tag">Commodity Markets</span>
+          <span class="skill-tag">Quantitative Research</span>
+          <span class="skill-tag">Data Clustering</span>
         </div>
       </div>
 
