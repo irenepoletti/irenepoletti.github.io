@@ -9,20 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Palette Sfumature di Verde */
-      --bg-dark: #06110a;             /* Verde scurissimo / Notte */
-      --card-bg: #0d1e14;             /* Verde bosco scuro */
-      --card-hover: #132a1c;          /* Verde pino intermedio */
-      --border-subtle: #1a3825;       /* Verde oliva scuro */
-      --border-accent: #275438;       /* Verde smeraldo border */
-      
-      --accent-mint: #34d399;         /* Verde menta chiaro */
-      --accent-emerald: #10b981;      /* Verde smeraldo brillante */
+      --bg-dark: #06110a;
+      --card-bg: #0d1e14;
+      --card-hover: #132a1c;
+      --border-subtle: #1a3825;
+      --border-accent: #275438;
+      --accent-mint: #34d399;
+      --accent-emerald: #10b981;
       --accent-glow: rgba(52, 211, 153, 0.15);
-      
-      --text-main: #f0fdf4;           /* Bianco menta */
-      --text-muted: #86efac;          /* Verde menta tenue */
-      --tag-bg: #092214;              /* Sfondo badge verde scuro */
+      --text-main: #f0fdf4;
+      --text-muted: #86efac;
+      --tag-bg: #092214;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
@@ -38,7 +35,7 @@
 
     .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
 
-    /* NAVBAR FLUTTUANTE STILE ENES */
+    /* NAVBAR FLUTTUANTE A PILLOLA */
     .navbar-container {
       position: fixed;
       top: 20px;
@@ -49,7 +46,7 @@
       z-index: 1000;
     }
     .navbar {
-      background: rgba(13, 30, 20, 0.88);
+      background: rgba(13, 30, 20, 0.92);
       backdrop-filter: blur(12px);
       border: 1px solid var(--border-accent);
       padding: 8px 24px;
@@ -162,7 +159,7 @@
     .item-sub { color: var(--accent-mint); font-size: 0.9rem; font-weight: 500; margin-bottom: 12px; }
     .item-desc { color: #bbf7d0; font-size: 0.88rem; opacity: 0.85; }
 
-    /* SEZIONE CERTIFICAZIONI ESCLUSIVA (Oracle & McKinsey) */
+    /* GRID CERTIFICAZIONI (ORACLE & MCKINSEY) */
     .certs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 50px; }
     .cert-card {
       background: linear-gradient(135deg, var(--card-bg) 0%, #0b1a11 100%);
@@ -225,7 +222,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR FLUTTUANTE IN STILE ENES -->
+  <!-- NAVBAR FLUTTUANTE (Stile Enes) -->
   <div class="navbar-container">
     <nav class="navbar">
       <a href="#home" class="active">Home</a>
@@ -263,7 +260,7 @@
         </div>
       </div>
 
-      <!-- KPI HIGHLIGHT CARDS -->
+      <!-- CARDS KPI HIGHLIGHT -->
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-icon">📊</div>
@@ -287,7 +284,7 @@
     <section id="about">
       <h2 class="section-header">About Me</h2>
 
-      <!-- CERTIFICAZIONI MCKINSEY & ORACLE -->
+      <!-- CERTIFICAZIONI ESCLUSIVE -->
       <h3 style="color: var(--accent-mint); margin-bottom: 16px; font-size: 1.1rem; font-weight: 700;">Professional Certifications</h3>
       <div class="certs-grid">
         <div class="cert-card">
