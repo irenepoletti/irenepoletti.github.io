@@ -11,7 +11,7 @@ export const profile = {
   bio: 'Combining rigorous process verification with hands-on experience shipping digital tools, automating workflows, and translating stakeholder needs into requirements. Double degree candidate focused on driving outcomes through structured thinking and user empathy.',
   socials: [
     { label: 'LinkedIn', icon: LinkedinIcon, href: 'https://www.linkedin.com/in/irene-poletti/' },
-    { label: 'GitHub', icon: GithubIcon, href: 'https://github.com/irenepoletti01-coder' },
+    { label: 'GitHub', icon: GithubIcon, href: 'https://github.com/irenepoletti' },
     { label: 'Email', icon: Mail, href: 'mailto:irenepolettiads@gmail.com' },
   ],
   skills: [
@@ -89,7 +89,7 @@ export const featuredProject = {
   tags: ['Product Specs & MVP', 'B2B SaaS Pricing', 'Go-To-Market Strategy', 'AI Governance'],
   links: [
     { label: 'Interactive Product Demo', icon: MonitorPlay, href: 'https://pixel-perfect-clone-01794.lovable.app', variant: 'primary' },
-    { label: 'Strategic Deck', icon: Presentation, href: 'https://prezi.com/p/edit/0dTeRDAyCeSXepu8y1vGi41/', variant: 'secondary' },
+    { label: 'Strategic Deck', icon: Presentation, href: 'https://prezi.com/view/0dTeRDAyCeSXepu8y1vGi41', variant: 'secondary' },,
   ],
 };
 
